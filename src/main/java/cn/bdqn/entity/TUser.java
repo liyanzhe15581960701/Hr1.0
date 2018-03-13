@@ -18,6 +18,7 @@ public class TUser {
 */
     private int id  , departmentid , PHONE ;
     private String name , password , userrole , department ;
+    private  Userrole Userrole;
 
     public TUser() {
     }
