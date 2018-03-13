@@ -17,36 +17,45 @@ package cn.bdqn.entity;
 public class Job {
     private  int id,enable,jobTypeId,departmentId;
     private  String jobCode,info, remarks;
+    private jobTitle jobTitle;
+    private Department Department;
+
 
     public Job() {
     }
 
-    @Override
-    public String toString() {
-        return "Job{" +
-                "id=" + id +
-                ", enable=" + enable +
-                ", jobTypeId=" + jobTypeId +
-                ", departmentId=" + departmentId +
-                ", jobCode='" + jobCode + '\'' +
-                ", info='" + info + '\'' +
-                ", remarks='" + remarks + '\'' +
-                '}';
-    }
 
-    public Job(int id, int enable, int jobTypeId, int departmentId, String jobCode, String info, String remarks) {
+    public Job(int id, int enable, int jobTypeId, int departmentId, String jobCode, String info, String remarks, cn.bdqn.entity.jobTitle jobTitle, cn.bdqn.entity.Department department) {
         this.id = id;
         this.enable = enable;
         this.jobTypeId = jobTypeId;
         this.departmentId = departmentId;
         this.jobCode = jobCode;
         this.info = info;
-        remarks = remarks;
+        this.remarks = remarks;
+        this.jobTitle = jobTitle;
+        Department = department;
+    }
+
+    public cn.bdqn.entity.Department getDepartment() {
+        return Department;
+    }
+
+    public void setDepartment(cn.bdqn.entity.Department department) {
+        Department = department;
     }
 
     public int getId() {
 
         return id;
+    }
+
+    public cn.bdqn.entity.jobTitle getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(cn.bdqn.entity.jobTitle jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public void setId(int id) {
@@ -99,5 +108,21 @@ public class Job {
 
     public void setRemarks(String remarks) {
         remarks = remarks;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Job{" +
+                "id=" + id +
+                ", enable=" + enable +
+                ", jobTypeId=" + jobTypeId +
+                ", departmentId=" + departmentId +
+                ", jobCode='" + jobCode + '\'' +
+                ", info='" + info + '\'' +
+                ", remarks='" + remarks + '\'' +
+                ", jobTitle=" + jobTitle +
+                ", Department=" + Department +
+                '}';
     }
 }
