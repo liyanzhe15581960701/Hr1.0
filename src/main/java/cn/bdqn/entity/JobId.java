@@ -8,11 +8,11 @@ package cn.bdqn.entity;
 
  * Created by Administrator on 2018/3/13.
  */
-public class JobType {
+public class JobId {
     private  int id;
     private  String name;
 
-    public JobType(int id, String name) {
+    public JobId(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -43,6 +43,6 @@ public class JobType {
                 '}';
     }
 
-    public JobType() {
+    public JobId() {
     }
 }
