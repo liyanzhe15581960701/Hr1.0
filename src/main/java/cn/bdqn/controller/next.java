@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class next {
     @RequestMapping("tonext")
     public String tonext() {
+        System.out.println("试试");
         return "待办列表";
     }
 }
